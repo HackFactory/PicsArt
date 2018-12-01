@@ -9,6 +9,7 @@ class ModelEmb:
     def __init__(self):
         #init model
         self.model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+        self.model._make_predict_function()
         
     def run(self, img):
         assert img.shape[1:] == (224, 224, 3)

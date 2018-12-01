@@ -4,12 +4,16 @@ import sys
 from flask import Flask, request
 from flask import jsonify
 
+sys.path.insert(0, "/home/ubuntu/PicsArt/")
+
 import utils
+from model import ModelEmb
+from instagram_parser.hack_bot import Hack_bot
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-user_emb_table = {"user": [embedding]}
+user_emb_table = {"user": ""}
 
 
 @app.route('/instagram_preprocessing/', methods=['GET', 'POST'])
