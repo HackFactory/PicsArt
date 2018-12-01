@@ -13,7 +13,7 @@ class ModelEmb:
         
     def run(self, img):
         assert img.shape[1:] == (224, 224, 3)
-        img = preprocess_input(img)
+#         img = preprocess_input(img)
         features = self.model.predict(img)
         return features.sum(axis=1).sum(axis=1).mean(axis=0).reshape(1, -1)
     
