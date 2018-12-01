@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: instabot
+Version: 0.3.5.3
+Summary: Cool Instagram bot scripts and API python wrapper.
+Home-page: https://github.com/instagrambot/instabot
+Author: Daniil Okhlopkov, Evgeny Kemerov
+Author-email: ohld@icloud.com, eskemerov@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/instagrambot/instabot/tarball/0.3.5.3
+Description: UNKNOWN
+Keywords: instagram,bot,api,wrapper
+Platform: UNKNOWN
