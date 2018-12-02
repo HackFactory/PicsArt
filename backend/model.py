@@ -7,7 +7,6 @@ from keras.preprocessing import image
 from keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 # from keras.applications.inception_v3 import preprocess_input, decode_predictions
 
-
 from sklearn.metrics.pairwise import cosine_similarity
 
 from skimage import io
@@ -40,8 +39,8 @@ def content_loss(x, y):
 class RankModel(object):
     
     def __init__(self):
-        self.img_nrows = 299
-        self.img_ncols = 299
+        self.img_nrows = 224
+        self.img_ncols = 224
         self.num = 1
         
         self.base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(self.img_nrows, self.img_ncols, 3))
@@ -73,9 +72,12 @@ class RankModel(object):
     
     def preprocess_image(self, img):
         img = image.array_to_img(img)
+        print('Sum of pixels before resize:', np.array(img).sum())
         img = img.resize((self.img_nrows, self.img_ncols))
         img = image.img_to_array(img)
+        print('Sum of pixels after resize:', np.array(img).sum())
         img = preprocess_input(img)
+        print('Sum of pixels after preprocess_input():', np.array(img).sum())
         return np.array([img])
     
     
@@ -87,6 +89,7 @@ class RankModel(object):
 
     def get_sim(self, img, ind, mode='emb') -> float:
         assert mode in {'emb', 'style', 'content'}
+        mode_dict = {'emb': self.metric_emb, 'content': self.metric_content, 'style': self.metric_style}
         res = sum(map(getattr(self, 'metric_' + mode), [img]*self.num, self.imgs[ind])) / self.num
         return res
     
@@ -96,7 +99,6 @@ class RankModel(object):
         img1_emb = img1_emb.sum(axis=1).sum(axis=1).mean(axis=0).reshape(1, -1)
         img2_emb = self.base_model.predict(img2[np.newaxis,:])
         img2_emb = img2_emb.sum(axis=1).sum(axis=1).mean(axis=0).reshape(1, -1)
-        
         return float(1 - cosine_similarity(img1_emb, img2_emb))
    
     
@@ -117,6 +119,7 @@ class RankModel(object):
     
     
     def recs(self, img, mode='emb'):
+        print("image mean:", np.mean(img))
         func = partial(self.get_sim, mode=mode)
         prob = list(map(func, [img]*self.num, range(self.num)))
         print(prob)

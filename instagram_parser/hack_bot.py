@@ -51,6 +51,7 @@ class Hack_bot:
             raise TypeError("No profile picture")
         return url
     
+    
     def get_names_from_niks(self,  nicks):
         """
         """
@@ -59,6 +60,8 @@ class Hack_bot:
             data = self.bot.get_user_info(nick)
             names.append(data["full_name"])
         return names
+    
+    
 #     def get_top_friends(self, my_account):
 #         my_folls = set(self.parse_all_followers(my_account)[:10])
 #         top_friends = {}

@@ -15,6 +15,8 @@ import utils
 from model import RankModel
 from instagram_parser.hack_bot import Hack_bot
 
+from werkzeug.serving import WSGIRequestHandler
+
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -40,14 +42,21 @@ def instagram_preprocessing():
         with open("../instagram_parser/dumps/{}.json".format(instagram_login)) as f:
             json_user_images_links = json.load(f)
     
-    print(json_user_images_links)
+    print(json_user_images_links.keys())
     to_nn = []
-    for folower_instagram_nickname in tqdm(json_user_images_links.keys()):
-        user_profile_photo[folower_instagram_nickname] = json_user_images_links[folower_instagram_nickname][0]
-        nicknames_list.append(folower_instagram_nickname)
-        to_nn.append(json_user_images_links[folower_instagram_nickname][1:])
+    global user_emb_table
+    global user_profile_photo
+    global nicknames_list
+    user_profile_photo = {}
+    user_emb_table = {}
+    nicknames_list = []
     
-    print(to_nn)
+    for folower_instagram_nickname in tqdm(json_user_images_links.keys()):
+        if len(json_user_images_links[folower_instagram_nickname]) > 1:
+            user_profile_photo[folower_instagram_nickname] = json_user_images_links[folower_instagram_nickname][0]
+            nicknames_list.append(folower_instagram_nickname)
+            to_nn.append(json_user_images_links[folower_instagram_nickname][1:])
+
     model.update_urls(to_nn)    
     return jsonify({"sucsess": "ok"})
 
@@ -66,19 +75,19 @@ def analyze_galery():
     filestr = request.files['image'].read()
     nparr = np.fromstring(filestr, np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     print(img.shape)
     img = model.preprocess_image(img)
     print(img.shape)
-    indexes, probs = model.recs(img, mode="content")
+    indexes, probs = model.recs(img, mode="emb")
+    print(nicknames_list)
     ranked_nicknames = np.array(nicknames_list)[indexes]
-    #ranked_names = hackbot.get_names_from_niks(ranked_nicknames)
-    ranked_names = ranked_nicknames
+    ranked_names = hackbot.get_names_from_niks(ranked_nicknames)
+    #ranked_names = ranked_nicknames
     resp = []
     for nick, name, index, prob in zip(ranked_nicknames, ranked_names, indexes, probs):
         photo_url = user_profile_photo[nick]
         resp.append([photo_url, nick, name, prob])
-    print(resp)
     return jsonify(resp)
 
 @app.route('/ping/', methods=['GET'])
@@ -86,4 +95,5 @@ def ping():
     return jsonify({"answer": "hello, world!"})
 
 if __name__ == '__main__':
+    WSGIRequestHandler.protocol_version = "HTTP/1.1"
     app.run(host="0.0.0.0", port=8888, debug=False)
