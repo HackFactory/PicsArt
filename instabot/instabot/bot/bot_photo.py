@@ -16,7 +16,7 @@ def upload_photo(self, photo, caption=None, upload_id=None):
 
 
 def download_photo(self, media_id, path='photos/', filename=None, description=False):
-#     delay.very_small_delay(self)
+    delay.very_small_delay(self)
     
     try:
         link = super(self.__class__, self).downloadPhoto(media_id, filename, False, path)

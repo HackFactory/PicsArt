@@ -58,6 +58,7 @@ class Hack_bot:
         for nick in nicks:
             data = self.bot.get_user_info(nick)
             names.append(data["full_name"])
+        return names
 #     def get_top_friends(self, my_account):
 #         my_folls = set(self.parse_all_followers(my_account)[:10])
 #         top_friends = {}
@@ -81,16 +82,15 @@ class Hack_bot:
         followers_ids = self.bot.get_user_followers(my_account)[:20]
         followers_names = []
         for pers in followers_ids:
-#             delay = 0.25
-#             time.sleep(delay*3/4 + delay*random.random()/2)
+            delay = 0.5
+            time.sleep(delay*3/4 + delay*random.random()/2)
             followers_names.append(self.bot.get_username_from_userid(pers))
         return followers_names
         
         
     def get_json_profile(self, my_account):
         followers_names = self.parse_all_followers(my_account)
-        ids = np.random.choice(np.arange(10), 5, replace=False)
-        
+        ids = np.arange(len(followers_names))
         res = {}
         for i in ids:
             

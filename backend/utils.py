@@ -11,6 +11,8 @@ from keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+from glob import glob
+
 import requests
 
 def prepare_login(request):
@@ -30,3 +32,10 @@ def shit_preprocess(urls):
     imgs = map(image.img_to_array, imgs)
     imgs = map(preprocess_input, imgs)
     return np.array(list(imgs))
+
+def run_instabot(nickname):
+    dumps = list(map(lambda x: os.path.basename(x), glob("../instagram_parser/dumps/*")))
+    print(dumps)
+    if "{}.json".format(nickname) in dumps:
+        return False
+    return True
