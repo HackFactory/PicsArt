@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C68D78A6C7DC1FFEFC91EC0 /* Pods_PicsSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB315B2213187FC9F987615D /* Pods_PicsSmart.framework */; };
+		7556E809D375058B1ABF5300 /* Pods_PicsSmartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0AEA912694FAC27FD5203B /* Pods_PicsSmartTests.framework */; };
+		BC2BC6D321B3BFA50048D77E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BC6CF21B3BFA40048D77E /* ViewController.m */; };
+		BC2BC6D421B3BFA50048D77E /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BC6D021B3BFA40048D77E /* ResultTableViewCell.m */; };
+		BC2BC6D521B3BFA50048D77E /* ShareWithOthersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BC6D221B3BFA50048D77E /* ShareWithOthersViewController.m */; };
+		BCA1E71221B327580007E28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E71121B327580007E28E /* AppDelegate.swift */; };
+		BCA1E71721B327580007E28E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA1E71521B327580007E28E /* Main.storyboard */; };
+		BCA1E71A21B327580007E28E /* PicsSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E71821B327580007E28E /* PicsSmart.xcdatamodeld */; };
+		BCA1E71C21B327590007E28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA1E71B21B327590007E28E /* Assets.xcassets */; };
+		BCA1E71F21B327590007E28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA1E71D21B327590007E28E /* LaunchScreen.storyboard */; };
+		BCA1E72A21B3275A0007E28E /* PicsSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E72921B3275A0007E28E /* PicsSmartTests.swift */; };
+		BCA1E73521B3275A0007E28E /* PicsSmartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E73421B3275A0007E28E /* PicsSmartUITests.swift */; };
+		BCA1E74321B34B2E0007E28E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E74221B34B2E0007E28E /* LoginViewController.swift */; };
+		BCA1E74521B34D110007E28E /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1E74421B34D110007E28E /* InstagramAuthViewController.swift */; };
+		BCFE757821B35EE6005DEA02 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE757721B35EE6005DEA02 /* PickerViewController.swift */; };
+		C0B4E6A03297F844FA05716F /* Pods_PicsSmartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2A7326286AFA738EEA8B20 /* Pods_PicsSmartUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCA1E72621B3275A0007E28E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCA1E70621B327580007E28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA1E70D21B327580007E28E;
+			remoteInfo = PicsSmart;
+		};
+		BCA1E73121B3275A0007E28E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCA1E70621B327580007E28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA1E70D21B327580007E28E;
+			remoteInfo = PicsSmart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BDB6AB7C183C67C18547865 /* Pods-PicsSmartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmartTests/Pods-PicsSmartTests.release.xcconfig"; sourceTree = "<group>"; };
+		438BCC5D98DBC9055D987790 /* Pods-PicsSmartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmartUITests/Pods-PicsSmartUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AAE8CF7D9E284825A24DDB4 /* Pods-PicsSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmart/Pods-PicsSmart.release.xcconfig"; sourceTree = "<group>"; };
+		7E2A7326286AFA738EEA8B20 /* Pods_PicsSmartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsSmartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B514CC6A095BF0E044ADC6 /* Pods-PicsSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmart/Pods-PicsSmart.debug.xcconfig"; sourceTree = "<group>"; };
+		AC953B3131E1FF50090DFEB5 /* Pods-PicsSmartUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmartUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmartUITests/Pods-PicsSmartUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2BC6CC21B3BFA30048D77E /* PicsSmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicsSmart-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC2BC6CD21B3BFA40048D77E /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		BC2BC6CE21B3BFA40048D77E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC2BC6CF21B3BFA40048D77E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC2BC6D021B3BFA40048D77E /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
+		BC2BC6D121B3BFA40048D77E /* ShareWithOthersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWithOthersViewController.h; sourceTree = "<group>"; };
+		BC2BC6D221B3BFA50048D77E /* ShareWithOthersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWithOthersViewController.m; sourceTree = "<group>"; };
+		BCA1E70E21B327580007E28E /* PicsSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA1E71121B327580007E28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCA1E71621B327580007E28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCA1E71921B327580007E28E /* PicsSmart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicsSmart.xcdatamodel; sourceTree = "<group>"; };
+		BCA1E71B21B327590007E28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCA1E71E21B327590007E28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCA1E72021B327590007E28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCA1E72521B3275A0007E28E /* PicsSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicsSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA1E72921B3275A0007E28E /* PicsSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsSmartTests.swift; sourceTree = "<group>"; };
+		BCA1E72B21B3275A0007E28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCA1E73021B3275A0007E28E /* PicsSmartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicsSmartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA1E73421B3275A0007E28E /* PicsSmartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsSmartUITests.swift; sourceTree = "<group>"; };
+		BCA1E73621B3275A0007E28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCA1E74221B34B2E0007E28E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCA1E74421B34D110007E28E /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
+		BCFE757721B35EE6005DEA02 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		DB315B2213187FC9F987615D /* Pods_PicsSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0AEA912694FAC27FD5203B /* Pods_PicsSmartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsSmartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A40CA4E5DDAA2BD3ABD6AD /* Pods-PicsSmartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsSmartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicsSmartTests/Pods-PicsSmartTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCA1E70B21B327580007E28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C68D78A6C7DC1FFEFC91EC0 /* Pods_PicsSmart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72221B3275A0007E28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7556E809D375058B1ABF5300 /* Pods_PicsSmartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72D21B3275A0007E28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B4E6A03297F844FA05716F /* Pods_PicsSmartUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93F772E72638AEFF2B13E8B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB315B2213187FC9F987615D /* Pods_PicsSmart.framework */,
+				DE0AEA912694FAC27FD5203B /* Pods_PicsSmartTests.framework */,
+				7E2A7326286AFA738EEA8B20 /* Pods_PicsSmartUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93FEAB553FDA43BE7B4039AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81B514CC6A095BF0E044ADC6 /* Pods-PicsSmart.debug.xcconfig */,
+				6AAE8CF7D9E284825A24DDB4 /* Pods-PicsSmart.release.xcconfig */,
+				E8A40CA4E5DDAA2BD3ABD6AD /* Pods-PicsSmartTests.debug.xcconfig */,
+				3BDB6AB7C183C67C18547865 /* Pods-PicsSmartTests.release.xcconfig */,
+				AC953B3131E1FF50090DFEB5 /* Pods-PicsSmartUITests.debug.xcconfig */,
+				438BCC5D98DBC9055D987790 /* Pods-PicsSmartUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCA1E70521B327580007E28E = {
+			isa = PBXGroup;
+			children = (
+				BCA1E71021B327580007E28E /* PicsSmart */,
+				BCA1E72821B3275A0007E28E /* PicsSmartTests */,
+				BCA1E73321B3275A0007E28E /* PicsSmartUITests */,
+				BCA1E70F21B327580007E28E /* Products */,
+				93FEAB553FDA43BE7B4039AD /* Pods */,
+				93F772E72638AEFF2B13E8B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCA1E70F21B327580007E28E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1E70E21B327580007E28E /* PicsSmart.app */,
+				BCA1E72521B3275A0007E28E /* PicsSmartTests.xctest */,
+				BCA1E73021B3275A0007E28E /* PicsSmartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCA1E71021B327580007E28E /* PicsSmart */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1E71121B327580007E28E /* AppDelegate.swift */,
+				BCA1E71521B327580007E28E /* Main.storyboard */,
+				BCA1E71B21B327590007E28E /* Assets.xcassets */,
+				BCA1E71D21B327590007E28E /* LaunchScreen.storyboard */,
+				BCA1E72021B327590007E28E /* Info.plist */,
+				BCA1E71821B327580007E28E /* PicsSmart.xcdatamodeld */,
+				BCA1E74221B34B2E0007E28E /* LoginViewController.swift */,
+				BCA1E74421B34D110007E28E /* InstagramAuthViewController.swift */,
+				BCFE757721B35EE6005DEA02 /* PickerViewController.swift */,
+				BC2BC6CD21B3BFA40048D77E /* ResultTableViewCell.h */,
+				BC2BC6D021B3BFA40048D77E /* ResultTableViewCell.m */,
+				BC2BC6D121B3BFA40048D77E /* ShareWithOthersViewController.h */,
+				BC2BC6D221B3BFA50048D77E /* ShareWithOthersViewController.m */,
+				BC2BC6CE21B3BFA40048D77E /* ViewController.h */,
+				BC2BC6CF21B3BFA40048D77E /* ViewController.m */,
+				BC2BC6CC21B3BFA30048D77E /* PicsSmart-Bridging-Header.h */,
+			);
+			path = PicsSmart;
+			sourceTree = "<group>";
+		};
+		BCA1E72821B3275A0007E28E /* PicsSmartTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1E72921B3275A0007E28E /* PicsSmartTests.swift */,
+				BCA1E72B21B3275A0007E28E /* Info.plist */,
+			);
+			path = PicsSmartTests;
+			sourceTree = "<group>";
+		};
+		BCA1E73321B3275A0007E28E /* PicsSmartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1E73421B3275A0007E28E /* PicsSmartUITests.swift */,
+				BCA1E73621B3275A0007E28E /* Info.plist */,
+			);
+			path = PicsSmartUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCA1E70D21B327580007E28E /* PicsSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCA1E73921B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmart" */;
+			buildPhases = (
+				63750B93E180E1F2CB17C0D2 /* [CP] Check Pods Manifest.lock */,
+				BCA1E70A21B327580007E28E /* Sources */,
+				BCA1E70B21B327580007E28E /* Frameworks */,
+				BCA1E70C21B327580007E28E /* Resources */,
+				0A33362165A3CCEBD6F2DCDE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicsSmart;
+			productName = PicsSmart;
+			productReference = BCA1E70E21B327580007E28E /* PicsSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCA1E72421B3275A0007E28E /* PicsSmartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCA1E73C21B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmartTests" */;
+			buildPhases = (
+				08398D30989E05A676A1E4E2 /* [CP] Check Pods Manifest.lock */,
+				BCA1E72121B3275A0007E28E /* Sources */,
+				BCA1E72221B3275A0007E28E /* Frameworks */,
+				BCA1E72321B3275A0007E28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCA1E72721B3275A0007E28E /* PBXTargetDependency */,
+			);
+			name = PicsSmartTests;
+			productName = PicsSmartTests;
+			productReference = BCA1E72521B3275A0007E28E /* PicsSmartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCA1E72F21B3275A0007E28E /* PicsSmartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCA1E73F21B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmartUITests" */;
+			buildPhases = (
+				FF45EBE270AA32F54306BF58 /* [CP] Check Pods Manifest.lock */,
+				BCA1E72C21B3275A0007E28E /* Sources */,
+				BCA1E72D21B3275A0007E28E /* Frameworks */,
+				BCA1E72E21B3275A0007E28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCA1E73221B3275A0007E28E /* PBXTargetDependency */,
+			);
+			name = PicsSmartUITests;
+			productName = PicsSmartUITests;
+			productReference = BCA1E73021B3275A0007E28E /* PicsSmartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCA1E70621B327580007E28E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mountain Viewer";
+				TargetAttributes = {
+					BCA1E70D21B327580007E28E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					BCA1E72421B3275A0007E28E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BCA1E70D21B327580007E28E;
+					};
+					BCA1E72F21B3275A0007E28E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BCA1E70D21B327580007E28E;
+					};
+				};
+			};
+			buildConfigurationList = BCA1E70921B327580007E28E /* Build configuration list for PBXProject "PicsSmart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCA1E70521B327580007E28E;
+			productRefGroup = BCA1E70F21B327580007E28E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCA1E70D21B327580007E28E /* PicsSmart */,
+				BCA1E72421B3275A0007E28E /* PicsSmartTests */,
+				BCA1E72F21B3275A0007E28E /* PicsSmartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCA1E70C21B327580007E28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA1E71F21B327590007E28E /* LaunchScreen.storyboard in Resources */,
+				BCA1E71C21B327590007E28E /* Assets.xcassets in Resources */,
+				BCA1E71721B327580007E28E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72321B3275A0007E28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72E21B3275A0007E28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08398D30989E05A676A1E4E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicsSmartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A33362165A3CCEBD6F2DCDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PicsSmart/Pods-PicsSmart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicsSmart/Pods-PicsSmart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63750B93E180E1F2CB17C0D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicsSmart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF45EBE270AA32F54306BF58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicsSmartUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCA1E70A21B327580007E28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2BC6D321B3BFA50048D77E /* ViewController.m in Sources */,
+				BCFE757821B35EE6005DEA02 /* PickerViewController.swift in Sources */,
+				BCA1E74321B34B2E0007E28E /* LoginViewController.swift in Sources */,
+				BCA1E74521B34D110007E28E /* InstagramAuthViewController.swift in Sources */,
+				BCA1E71221B327580007E28E /* AppDelegate.swift in Sources */,
+				BC2BC6D521B3BFA50048D77E /* ShareWithOthersViewController.m in Sources */,
+				BC2BC6D421B3BFA50048D77E /* ResultTableViewCell.m in Sources */,
+				BCA1E71A21B327580007E28E /* PicsSmart.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72121B3275A0007E28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA1E72A21B3275A0007E28E /* PicsSmartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA1E72C21B3275A0007E28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA1E73521B3275A0007E28E /* PicsSmartUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCA1E72721B3275A0007E28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA1E70D21B327580007E28E /* PicsSmart */;
+			targetProxy = BCA1E72621B3275A0007E28E /* PBXContainerItemProxy */;
+		};
+		BCA1E73221B3275A0007E28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA1E70D21B327580007E28E /* PicsSmart */;
+			targetProxy = BCA1E73121B3275A0007E28E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCA1E71521B327580007E28E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCA1E71621B327580007E28E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCA1E71D21B327590007E28E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCA1E71E21B327590007E28E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCA1E73721B3275A0007E28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCA1E73821B3275A0007E28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCA1E73A21B3275A0007E28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B514CC6A095BF0E044ADC6 /* Pods-PicsSmart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7544MQP9KA;
+				INFOPLIST_FILE = PicsSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PicsSmart/PicsSmart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCA1E73B21B3275A0007E28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AAE8CF7D9E284825A24DDB4 /* Pods-PicsSmart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7544MQP9KA;
+				INFOPLIST_FILE = PicsSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PicsSmart/PicsSmart-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCA1E73D21B3275A0007E28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A40CA4E5DDAA2BD3ABD6AD /* Pods-PicsSmartTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicsSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicsSmart.app/PicsSmart";
+			};
+			name = Debug;
+		};
+		BCA1E73E21B3275A0007E28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDB6AB7C183C67C18547865 /* Pods-PicsSmartTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicsSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicsSmart.app/PicsSmart";
+			};
+			name = Release;
+		};
+		BCA1E74021B3275A0007E28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC953B3131E1FF50090DFEB5 /* Pods-PicsSmartUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicsSmartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicsSmart;
+			};
+			name = Debug;
+		};
+		BCA1E74121B3275A0007E28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438BCC5D98DBC9055D987790 /* Pods-PicsSmartUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicsSmartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yar.PicsSmartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicsSmart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCA1E70921B327580007E28E /* Build configuration list for PBXProject "PicsSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA1E73721B3275A0007E28E /* Debug */,
+				BCA1E73821B3275A0007E28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCA1E73921B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA1E73A21B3275A0007E28E /* Debug */,
+				BCA1E73B21B3275A0007E28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCA1E73C21B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA1E73D21B3275A0007E28E /* Debug */,
+				BCA1E73E21B3275A0007E28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCA1E73F21B3275A0007E28E /* Build configuration list for PBXNativeTarget "PicsSmartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA1E74021B3275A0007E28E /* Debug */,
+				BCA1E74121B3275A0007E28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCA1E71821B327580007E28E /* PicsSmart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCA1E71921B327580007E28E /* PicsSmart.xcdatamodel */,
+			);
+			currentVersion = BCA1E71921B327580007E28E /* PicsSmart.xcdatamodel */;
+			path = PicsSmart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BCA1E70621B327580007E28E /* Project object */;
+}
